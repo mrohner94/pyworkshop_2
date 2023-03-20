@@ -27,3 +27,5 @@ my_chevy.start()
 mustang = Car("mustang")
 mustang.start()
 
+print(isinstance(my_chevy, Car))
+
