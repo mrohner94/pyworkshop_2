@@ -5,6 +5,12 @@ class Vehicle:
         self.model = model
         self.fuel = fuel
 
+    def is_eco_friendly(self):
+        if self.fuel == "gas":
+            return False
+        else:
+            return True
+
 
 class Car(Vehicle):
 
@@ -16,3 +22,8 @@ class Car(Vehicle):
         self.num_of_wheels = num_of_wheels
 
 
+# print(Vehicle.is_eco_friendly())
+
+vehicle = Vehicle("chevy", "equinox")
+
+print(vehicle.is_eco_friendly())
