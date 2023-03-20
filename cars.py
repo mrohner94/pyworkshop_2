@@ -6,6 +6,16 @@ class Car:
         print(f"instantiating vehicle: {name}")
         self.name = name
 
+    def __str__(self):
+        runStr = "is running"
+        if self.runs is False:
+            runStr = "is not running"
+
+        return f"{self.name} {runStr} has {self.number_of_wheels} wheels"
+
+    def __repr__(self):
+        return f"Car({self.name})"
+    
     def start(self):
         if self.runs:
             print(f"{self.name} car is started")
@@ -29,3 +39,7 @@ mustang.start()
 
 print(isinstance(my_chevy, Car))
 
+print(my_chevy)
+print(repr(my_chevy))
+
+print(mustang)
